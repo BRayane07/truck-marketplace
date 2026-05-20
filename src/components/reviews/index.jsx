@@ -5,7 +5,6 @@
  */
 
 import { User } from 'lucide-react'
-import { StarRating } from '../ui'
 
 export function ReviewCard({ review }) {
   const date = new Date(review.created_at).toLocaleDateString('fr-MA', {
@@ -51,7 +50,7 @@ import { useState } from 'react'
 import { supabase } from '../../lib/supabase'
 import { useAuth } from '../../context/AuthContext'
 import { useLang } from '../../context/LanguageContext'
-import { Button, Textarea, Alert } from '../ui'
+import { StarRating, Button, Textarea, Alert } from '../ui'
 import { notify } from '../../lib/notify'
 
 export function ReviewForm({ truckId, bookingId, onSuccess }) {
